@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://76eel6srutoa"]
+
+[ext_resource type="Script" path="res://scripts/CharacterCamera.gd" id="1_4kf2x"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xjxdv"]
+
+[node name="Personaje" type="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_xjxdv")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+current = true
+script = ExtResource("1_4kf2x")
