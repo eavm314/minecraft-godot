@@ -1,11 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://br32mvo2fe4j4"]
+[gd_scene load_steps=7 format=3 uid="uid://br32mvo2fe4j4"]
 
-[ext_resource type="PackedScene" uid="uid://bosohidea2f5h" path="res://scenes/terreno.tscn" id="1_8xlen"]
+[ext_resource type="PackedScene" uid="uid://bosohidea2f5h" path="res://scenes/Terreno.tscn" id="1_8xlen"]
 [ext_resource type="PackedScene" uid="uid://76eel6srutoa" path="res://scenes/Personaje.tscn" id="2_cy6ux"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2qax8"]
+sky_top_color = Color(0.294118, 0.65098, 0.85098, 1)
+sky_horizon_color = Color(0.623529, 0.704995, 0.745995, 1)
+ground_horizon_color = Color(0.623529, 0.704995, 0.745995, 1)
+
+[sub_resource type="Sky" id="Sky_6nryq"]
+sky_material = SubResource("ProceduralSkyMaterial_2qax8")
+
+[sub_resource type="Environment" id="Environment_lusql"]
+background_mode = 2
+sky = SubResource("Sky_6nryq")
+tonemap_mode = 2
+glow_enabled = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_5r1gl"]
 
 [node name="main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_lusql")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.770513, -0.254172, 0.584556, 0, 0.91706, 0.398749, -0.637424, -0.307241, 0.706607, 1.05356, 1.46505, 1.67533)
