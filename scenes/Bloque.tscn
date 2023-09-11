@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bosohidea2f5h"]
+
+[ext_resource type="Script" path="res://scripts/Bloque.gd" id="1_qcw7m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n8pgd"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_dk10x"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_g0iex"]
+
+[node name="Bloque" type="RigidBody3D"]
+script = ExtResource("1_qcw7m")
+recistencia = 1
+vida = 10
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_n8pgd")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_dk10x")
+surface_material_override/0 = SubResource("ORMMaterial3D_g0iex")

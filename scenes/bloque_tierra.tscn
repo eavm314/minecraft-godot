@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwaga1igau212"]
+
+[ext_resource type="PackedScene" uid="uid://bosohidea2f5h" path="res://scenes/Bloque.tscn" id="1_5dimj"]
+
+[node name="Bloque_tierra" instance=ExtResource("1_5dimj")]

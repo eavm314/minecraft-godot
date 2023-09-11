@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcccrl71i17mp"]
+
+[ext_resource type="PackedScene" uid="uid://bosohidea2f5h" path="res://scenes/Bloque.tscn" id="1_mm674"]
+[ext_resource type="Texture2D" uid="uid://cs3lwnct8fofn" path="res://texturas/rock.png" id="2_hn0nb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a1c77"]
+albedo_texture = ExtResource("2_hn0nb")
+uv1_scale = Vector3(3, 2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_i28mi"]
+material = SubResource("StandardMaterial3D_a1c77")
+
+[node name="BloqueRock" instance=ExtResource("1_mm674")]
+
+[node name="MeshInstance3D" parent="." index="1"]
+mesh = SubResource("BoxMesh_i28mi")
+surface_material_override/0 = null

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjn4yxuatow3f"]
+
+[ext_resource type="Script" path="res://Mapa.gd" id="1_2hm7o"]
+
+[node name="Node3D" type="GridMap"]
+script = ExtResource("1_2hm7o")

@@ -1,7 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://br32mvo2fe4j4"]
 
-[ext_resource type="PackedScene" uid="uid://bosohidea2f5h" path="res://scenes/Terreno.tscn" id="1_8xlen"]
 [ext_resource type="PackedScene" uid="uid://76eel6srutoa" path="res://scenes/Personaje.tscn" id="2_cy6ux"]
+[ext_resource type="PackedScene" uid="uid://bcccrl71i17mp" path="res://scenes/bloque_rock.tscn" id="2_uq1hd"]
+[ext_resource type="PackedScene" uid="uid://cjn4yxuatow3f" path="res://scenes/Mapa.tscn" id="3_uyy20"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2qax8"]
 sky_top_color = Color(0.294118, 0.65098, 0.85098, 1)
@@ -17,8 +18,6 @@ sky = SubResource("Sky_6nryq")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="BoxMesh" id="BoxMesh_5r1gl"]
-
 [node name="main" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -28,11 +27,9 @@ environment = SubResource("Environment_lusql")
 transform = Transform3D(0.770513, -0.254172, 0.584556, 0, 0.91706, 0.398749, -0.637424, -0.307241, 0.706607, 1.05356, 1.46505, 1.67533)
 shadow_enabled = true
 
-[node name="Terreno" parent="." instance=ExtResource("1_8xlen")]
-
 [node name="Personaje" parent="." instance=ExtResource("2_cy6ux")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 10, -4.134)
-mesh = SubResource("BoxMesh_5r1gl")
+[node name="BloqueRock" parent="." instance=ExtResource("2_uq1hd")]
+
+[node name="Node3D" parent="." instance=ExtResource("3_uyy20")]
