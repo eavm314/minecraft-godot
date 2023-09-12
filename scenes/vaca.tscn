@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bq60r2uikhbse"]
+[gd_scene load_steps=7 format=3 uid="uid://bq60r2uikhbse"]
 
 [ext_resource type="PackedScene" uid="uid://bosohidea2f5h" path="res://scenes/Bloque.tscn" id="1_gvxst"]
 [ext_resource type="Texture2D" uid="uid://c4nduw6068gf4" path="res://texturas/vaca.png" id="2_qfvho"]

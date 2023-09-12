@@ -5,7 +5,7 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jh436"]
 albedo_texture = ExtResource("2_q33nu")
-uv1_scale = Vector3(3, 1, 1)
+uv1_scale = Vector3(3, 2, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aru2k"]
 albedo_texture = ExtResource("2_q33nu")
