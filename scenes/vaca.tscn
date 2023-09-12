@@ -14,8 +14,13 @@ uv1_scale = Vector3(3, 1, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_rikku"]
 material = SubResource("StandardMaterial3D_4uua0")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lye7b"]
+albedo_texture = ExtResource("2_qfvho")
+uv1_scale = Vector3(3, 2, 1)
+
 [node name="Vaca" instance=ExtResource("1_gvxst")]
 
 [node name="MeshInstance3D" parent="." index="1"]
 material_override = SubResource("StandardMaterial3D_neyhb")
 mesh = SubResource("BoxMesh_rikku")
+surface_material_override/0 = SubResource("StandardMaterial3D_lye7b")
