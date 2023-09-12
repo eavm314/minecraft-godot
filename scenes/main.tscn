@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://br32mvo2fe4j4"]
+[gd_scene load_steps=6 format=3 uid="uid://br32mvo2fe4j4"]
 
 [ext_resource type="PackedScene" uid="uid://76eel6srutoa" path="res://scenes/Personaje.tscn" id="2_cy6ux"]
-[ext_resource type="PackedScene" uid="uid://bcccrl71i17mp" path="res://scenes/bloque_rock.tscn" id="2_uq1hd"]
 [ext_resource type="PackedScene" uid="uid://cjn4yxuatow3f" path="res://scenes/Mapa.tscn" id="3_uyy20"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2qax8"]
@@ -23,13 +22,9 @@ glow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_lusql")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.770513, -0.254172, 0.584556, 0, 0.91706, 0.398749, -0.637424, -0.307241, 0.706607, 1.05356, 1.46505, 1.67533)
-shadow_enabled = true
-
 [node name="Personaje" parent="." instance=ExtResource("2_cy6ux")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
 
-[node name="BloqueRock" parent="." instance=ExtResource("2_uq1hd")]
-
 [node name="Mapa" parent="." instance=ExtResource("3_uyy20")]
+cell_size = Vector3(1, 1, 1)
+size = 10
