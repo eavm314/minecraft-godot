@@ -1,5 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://bwaga1igau212"]
+[gd_scene load_steps=5 format=3 uid="uid://bwaga1igau212"]
 
 [ext_resource type="PackedScene" uid="uid://bosohidea2f5h" path="res://scenes/Bloque.tscn" id="1_5dimj"]
+[ext_resource type="Texture2D" uid="uid://mvhcrdxkp410" path="res://texturas/tierra.jpg" id="2_w8qwh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xfokw"]
+albedo_texture = ExtResource("2_w8qwh")
+uv1_scale = Vector3(3, 2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_e331y"]
+material = SubResource("StandardMaterial3D_xfokw")
 
 [node name="Bloque_tierra" instance=ExtResource("1_5dimj")]
+
+[node name="MeshInstance3D" parent="." index="1"]
+mesh = SubResource("BoxMesh_e331y")

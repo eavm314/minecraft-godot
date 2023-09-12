@@ -32,4 +32,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
 
 [node name="BloqueRock" parent="." instance=ExtResource("2_uq1hd")]
 
-[node name="Node3D" parent="." instance=ExtResource("3_uyy20")]
+[node name="Mapa" parent="." instance=ExtResource("3_uyy20")]

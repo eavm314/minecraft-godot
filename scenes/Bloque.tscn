@@ -4,7 +4,7 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n8pgd"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_dk10x"]
+[sub_resource type="BoxMesh" id="BoxMesh_ovph7"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_g0iex"]
 
@@ -17,5 +17,5 @@ vida = 10
 shape = SubResource("BoxShape3D_n8pgd")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_dk10x")
+mesh = SubResource("BoxMesh_ovph7")
 surface_material_override/0 = SubResource("ORMMaterial3D_g0iex")
