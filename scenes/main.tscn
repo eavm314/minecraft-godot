@@ -14,13 +14,15 @@ sky_material = SubResource("ProceduralSkyMaterial_2qax8")
 [sub_resource type="Environment" id="Environment_lusql"]
 background_mode = 2
 sky = SubResource("Sky_6nryq")
-tonemap_mode = 2
 glow_enabled = true
 
 [node name="main" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_lusql")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.222263, 0.974987, 0, -0.974987, 0.222263, 0, 0, 0)
 
 [node name="Personaje" parent="." instance=ExtResource("2_cy6ux")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)

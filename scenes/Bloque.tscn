@@ -7,6 +7,8 @@
 [sub_resource type="BoxMesh" id="BoxMesh_ovph7"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_g0iex"]
+shading_mode = 0
+specular_mode = 2
 
 [node name="Bloque" type="RigidBody3D"]
 script = ExtResource("1_qcw7m")
