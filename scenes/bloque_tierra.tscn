@@ -16,6 +16,8 @@ lightmap_size_hint = Vector2i(14, 21)
 material = SubResource("StandardMaterial3D_xfokw")
 
 [node name="Bloque_tierra" instance=ExtResource("1_5dimj")]
+resistencia = 2
+tipo = "tierra"
 
 [node name="MeshInstance3D" parent="." index="1"]
 material_override = SubResource("StandardMaterial3D_u7w2g")
