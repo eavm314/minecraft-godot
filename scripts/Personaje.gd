@@ -9,7 +9,6 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var camera: Camera3D = $Camera3D
  
 # rayo
-signal  des
 var origin 
 var end
 
@@ -59,15 +58,12 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
- 
+
 	move_and_slide()
 
 func block_collision(result):
 	if result.size() != 0:
 		var position = result.position
-		print(result.position)
-		emit_signal("des", position)
-		"""var bloque = load("res://scenes/Bloque.tscn")
-		var instancia_bloque = bloque.get_instance_id()
-		var nodo_bloque = instancia_bloque.get_node(".")
-		nodo_bloque.destroy()"""
+		print(result["collider"])
+		result["collider"].destroy()
+		
