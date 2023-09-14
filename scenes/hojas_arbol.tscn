@@ -12,6 +12,8 @@ albedo_texture = ExtResource("2_q33nu")
 uv1_scale = Vector3(3, 2, 1)
 
 [node name="Hojas_arbol" instance=ExtResource("1_ptmp4")]
+resistencia = 1
+tipo = "hoja_arbol"
 
 [node name="MeshInstance3D" parent="." index="1"]
 material_override = SubResource("StandardMaterial3D_jh436")

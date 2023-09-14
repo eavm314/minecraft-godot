@@ -19,6 +19,8 @@ albedo_texture = ExtResource("2_qfvho")
 uv1_scale = Vector3(3, 2, 1)
 
 [node name="Vaca" instance=ExtResource("1_gvxst")]
+resistencia = 2
+tipo = "vaca"
 
 [node name="MeshInstance3D" parent="." index="1"]
 material_override = SubResource("StandardMaterial3D_neyhb")

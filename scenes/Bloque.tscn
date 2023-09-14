@@ -12,7 +12,6 @@ specular_mode = 2
 
 [node name="Bloque" type="RigidBody3D"]
 script = ExtResource("1_qcw7m")
-recistencia = 1
 vida = 10
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

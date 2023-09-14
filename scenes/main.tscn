@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://br32mvo2fe4j4"]
+[gd_scene load_steps=7 format=3 uid="uid://br32mvo2fe4j4"]
 
 [ext_resource type="PackedScene" uid="uid://76eel6srutoa" path="res://scenes/Personaje.tscn" id="2_cy6ux"]
+[ext_resource type="PackedScene" uid="uid://bwaga1igau212" path="res://scenes/bloque_tierra.tscn" id="3_exu0j"]
 [ext_resource type="PackedScene" uid="uid://cjn4yxuatow3f" path="res://scenes/Mapa.tscn" id="3_uyy20"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2qax8"]
@@ -30,3 +31,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
 [node name="Mapa" parent="." instance=ExtResource("3_uyy20")]
 cell_size = Vector3(1, 1, 1)
 size = 10
+
+[node name="Bloque_tierra" parent="." instance=ExtResource("3_exu0j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.776942, 1.48327, -1.34779)
