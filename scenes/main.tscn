@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://br32mvo2fe4j4"]
+[gd_scene load_steps=7 format=3 uid="uid://br32mvo2fe4j4"]
 
+[ext_resource type="PackedScene" uid="uid://dfxxifnx15utx" path="res://scenes/hojas_arbol.tscn" id="1_6wj7h"]
 [ext_resource type="PackedScene" uid="uid://76eel6srutoa" path="res://scenes/Personaje.tscn" id="2_cy6ux"]
 [ext_resource type="PackedScene" uid="uid://cjn4yxuatow3f" path="res://scenes/Mapa.tscn" id="3_uyy20"]
 
@@ -30,3 +31,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
 [node name="Mapa" parent="." instance=ExtResource("3_uyy20")]
 cell_size = Vector3(1, 1, 1)
 size = 10
+
+[node name="Hojas_arbol" parent="." instance=ExtResource("1_6wj7h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.94939, 1.46818, -1.97891)
