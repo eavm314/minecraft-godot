@@ -16,7 +16,7 @@ uv1_scale = Vector3(3, 2, 1)
 material = SubResource("StandardMaterial3D_a1c77")
 
 [node name="BloqueRock" instance=ExtResource("1_mm674")]
-resistencia = 3
+resistencia = 2
 tipo = "roca"
 
 [node name="MeshInstance3D" parent="." index="1"]

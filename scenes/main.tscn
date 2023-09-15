@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://br32mvo2fe4j4"]
+[gd_scene load_steps=10 format=3 uid="uid://br32mvo2fe4j4"]
 
 [ext_resource type="PackedScene" uid="uid://dfxxifnx15utx" path="res://scenes/hojas_arbol.tscn" id="1_6wj7h"]
+[ext_resource type="Script" path="res://scripts/Main.gd" id="1_gyof7"]
+[ext_resource type="PackedScene" uid="uid://b6pfaj7wbsiti" path="res://scenes/UI.tscn" id="1_xn01g"]
 [ext_resource type="PackedScene" uid="uid://76eel6srutoa" path="res://scenes/Personaje.tscn" id="2_cy6ux"]
-[ext_resource type="PackedScene" uid="uid://bwaga1igau212" path="res://scenes/bloque_tierra.tscn" id="3_exu0j"]
 [ext_resource type="PackedScene" uid="uid://cjn4yxuatow3f" path="res://scenes/Mapa.tscn" id="3_uyy20"]
+[ext_resource type="AudioStream" uid="uid://u4eb6orpdo6l" path="res://sound/fondo.mp3" id="6_j1xm4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2qax8"]
 sky_top_color = Color(0.294118, 0.65098, 0.85098, 1)
@@ -19,6 +21,9 @@ sky = SubResource("Sky_6nryq")
 glow_enabled = true
 
 [node name="main" type="Node3D"]
+script = ExtResource("1_gyof7")
+
+[node name="UI" parent="." instance=ExtResource("1_xn01g")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_lusql")
@@ -31,7 +36,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
 
 [node name="Mapa" parent="." instance=ExtResource("3_uyy20")]
 cell_size = Vector3(1, 1, 1)
-size = 10
+size = 20
+profundidad = 5
 
 [node name="Hojas_arbol" parent="." instance=ExtResource("1_6wj7h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.94939, 1.46818, -1.97891)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 7, 2)
+gravity_scale = 1.0
+freeze = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_j1xm4")
+volume_db = -5.0
+pitch_scale = 0.8

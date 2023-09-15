@@ -5,9 +5,7 @@ extends RigidBody3D
 @export var vida: int 
 
 func destroy ():
-	if vida >= 0:
-		print("aaa muero")
-		vida -= resistencia
-	else :
+	vida -= resistencia
+	if vida <= 0:
 		print("aaaa moriiiii")
 		queue_free()

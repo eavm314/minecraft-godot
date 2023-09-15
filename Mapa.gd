@@ -1,8 +1,9 @@
 extends GridMap
 
 # Escena que deseas instanciar en cada celda
-@onready var cell_scene = preload("res://scenes/vaca.tscn")
+@onready var cell_scene = preload("res://scenes/bloque_tierra.tscn")
 @export var size: int
+@export var profundidad: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,8 +11,9 @@ func _ready():
 	var grid = []
 	
 	for i in range(-size, size+1):
-		for j in range(-size, size+1):
-			grid.append(Vector3(i,0,j))
+		for k in range(-size, size+1):
+			for j in range(profundidad):
+				grid.append(Vector3(i,j,k))
 	# Recorre todas las celdas del GridMap
 	for cell_pos in grid:
 		print(cell_pos)
